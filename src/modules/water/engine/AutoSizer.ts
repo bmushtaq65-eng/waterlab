@@ -1,5 +1,6 @@
 import type { WaterNetworkModel, Pipe, WaterLink } from '../../../types/water';
-import { EpanetEngine, HydraulicCriteria } from './EpanetEngine';
+import { EpanetEngine } from './EpanetEngine';
+import type { HydraulicCriteria } from './EpanetEngine';
 
 const STANDARD_DIAMETERS = [50, 75, 90, 110, 160, 200, 250, 315, 400, 500, 630];
 
