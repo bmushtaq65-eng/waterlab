@@ -1,32 +1,50 @@
-# React + TypeScript + Vite
+# 💧 Water Lab
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+Water Lab is an interactive web-based hydraulic simulation tool powered by EPANET. It allows you to draw water networks, configure junctions, reservoirs, tanks, and pipes, and simulate hydraulic behavior directly in the browser!
 
-Currently, two official plugins are available:
+## 🚀 Live Demo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+You can try out Water Lab live on GitHub Pages:
+**👉 [https://bmushtaq65-eng.github.io/waterlab/](https://bmushtaq65-eng.github.io/waterlab/)**
 
-## React Compiler
+## 🛠️ Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+* **Interactive Canvas**: Visually draw your water network using an intuitive point-and-click interface.
+* **Property Panel**: Edit properties for junctions (demand, elevation), reservoirs (head), and pipes (diameter, length, roughness).
+* **Live EPANET Simulation**: Run hydraulic simulations directly in the browser using the EPANET WebAssembly engine (`epanet-js`).
+* **Visual Results**: View pressure at junctions and flow velocity in pipes mapped directly onto the canvas.
+* **Data Tables**: View and edit network data in tabular form, and export results to Excel.
 
-## Expanding the Oxlint configuration
+## 💻 Running Locally
 
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
+To run Water Lab on your local machine, follow these steps:
 
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/bmushtaq65-eng/waterlab.git
+   cd waterlab
+   ```
+
+2. **Install dependencies:**
+   Make sure you have Node.js installed, then run:
+   ```bash
+   npm install
+   ```
+
+3. **Start the development server:**
+   ```bash
+   npm run dev
+   ```
+
+4. **Open your browser:**
+   Navigate to `http://localhost:5173` to view the app!
+
+## 📦 Deployment
+
+This project uses `gh-pages` to deploy to GitHub Pages. To build and deploy the app:
+
+```bash
+npm run build
+npx gh-pages -d dist
 ```
-
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+*(Make sure GitHub Pages is configured to serve from the `gh-pages` branch).*
